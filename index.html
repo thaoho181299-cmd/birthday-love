@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe5ef">
+<title>Happy Birthday, Bé Yêu 💗</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Một món quà nhỏ dành cho người anh thương 💗">
+<meta property="og:description" content="Có một bất ngờ nhỏ xíu đang chờ em mở nè 🎁">
+<style>
+:root{--pink:#ff6fa5;--deep:#9b315e;--cream:#fff8fb;--rose:#ffd5e5;--ink:#71334f;--gold:#ffd778}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at top,#fffafd,#ffe6f0 48%,#ffd3e4);overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0}.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;position:relative}.panel{width:min(680px,100%);text-align:center;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:30px;padding:clamp(24px,5vw,44px);box-shadow:0 18px 55px #bd55752b;backdrop-filter:blur(10px);position:relative;z-index:1}.eyebrow{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:#c44e80;font-weight:800}.big-title{font-size:clamp(2.3rem,8vw,4.4rem);line-height:1.1;margin:18px 0;color:#bd477a;font-weight:900;text-shadow:0 4px 0 #fff}.subtitle{font-size:1.06rem;line-height:1.8;max-width:510px;margin:0 auto 22px}.gift{font-size:clamp(5rem,18vw,8rem);animation:bob 2s ease-in-out infinite;filter:drop-shadow(0 12px 10px #c14a7825)}.btn{background:linear-gradient(135deg,#ff83b3,#f04e91);color:white;padding:14px 24px;border-radius:999px;font-weight:800;box-shadow:0 8px 20px #f04e9140;transition:.2s;margin:5px}.btn:hover{transform:translateY(-3px) scale(1.02)}.btn.secondary{background:white;color:#c44e80;border:1px solid #ffc0d7;box-shadow:none}.hidden{display:none!important}.cake{font-size:7rem;margin:10px auto;filter:drop-shadow(0 10px 10px #d64b7b22);animation:bob 2.5s ease-in-out infinite}.date-pill{display:inline-block;background:#fff;border-radius:999px;padding:8px 15px;color:#c44e80;font-weight:800}.note{background:#fff4f8;border:1px dashed #ff9fc3;border-radius:20px;padding:18px;margin:20px 0;line-height:1.8}.letter{white-space:pre-line;text-align:left;line-height:1.95;font-size:1.04rem}.signature{text-align:right;color:#c44e80;font-weight:800;margin-top:18px}.heart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.heart-choice{background:#fff0f6;border:1px solid #ffc1d8;border-radius:20px;padding:18px 8px;color:#b84275;font-weight:800;min-height:130px;transition:.2s}.heart-choice span{display:block;font-size:2.6rem;margin-bottom:8px;animation:heartbeat 1.4s infinite}.heart-choice:hover,.heart-choice.active{background:#ffd8e8;transform:translateY(-4px)}.answer{background:#fff;border-radius:20px;padding:20px;line-height:1.8;text-align:left;border:1px solid #ffd1e2}.footer{font-size:.8rem;opacity:.8;margin-top:25px}.music{position:fixed;top:12px;right:12px;z-index:5;background:#fff;color:#c44e80;border:1px solid #ffc0d7;border-radius:999px;padding:9px 13px;font-weight:800;box-shadow:0 5px 15px #a6386320}.float{position:fixed;top:-40px;pointer-events:none;z-index:10;animation:fall linear forwards;opacity:.1;text-shadow: 0 2px 8px rgba(190,55,115,.18);}@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.2}}@media(max-width:480px){.heart-grid{gap:7px}.heart-choice{font-size:.84rem;padding:12px 4px;min-height:112px}.heart-choice span{font-size:2.2rem}.panel{border-radius:24px}}
+</style>
+</head>
+<body>
+<button class="music" id="musicBtn" aria-label="Bật nhạc">🎵 Bật nhạc</button>
+<audio id="music" loop><source src="nhac.mp3" type="audio/mpeg"></audio>
+
+<section class="screen" id="intro">
+  <div class="panel">
+    <div class="eyebrow">A tiny surprise, made with love</div>
+    <div class="gift">🎁</div>
+    <h1 class="big-title">Happy Birthday<br>bé yêu của anh! 💗</h1>
+    <p class="subtitle">Hôm nay là ngày đặc biệt của người anh thương nhất. Anh có một món quà nhỏ xinh xinh muốn dành riêng cho em nè. Sẵn sàng mở quà chưa? 🥹💕</p>
+    <button class="btn" id="openBtn">Mở quà đi nè 🎀</button>
+    <div class="footer">P.S. Cấm cười trước khi mở quà nhaaa 🤭</div>
+  </div>
+</section>
+
+<section class="screen hidden" id="birthday">
+  <div class="panel">
+    <div class="date-pill">🎂 Hôm nay là ngày của em 🎂</div>
+    <h2 class="big-title">Chúc mừng sinh nhật<br>cục cưng của anh! 🌷</h2>
+    <div class="cake">🎂</div>
+    <p class="subtitle">Nhắm mắt lại, ước một điều thật xinh rồi thổi nến nha. Anh mong điều ước nào của em cũng sẽ thành sự thật! ✨</p>
+    <div class="note" id="candleNote">Nến đang sáng lung linh chờ em đó. Ước gì thì ước, nhớ chừa một điều ước cho tụi mình nha. 💞</div>
+    <button class="btn" id="blowBtn">Thổi nến nàooo! 🕯️</button>
+    <button class="btn secondary hidden" id="letterBtn">Đọc thư bí mật 💌</button>
+  </div>
+</section>
+
+<section class="screen hidden" id="letter">
+  <div class="panel">
+    <div class="eyebrow">A little love letter</div>
+    <h2 class="big-title" style="font-size:clamp(2rem,7vw,3.2rem)">Gửi em yêu của anh 💌</h2>
+    <div class="letter" id="letterText">Bé yêu à,
+
+Chúc mừng sinh nhật em — người đã làm những ngày bình thường của anh trở nên đáng yêu hơn rất nhiều. 💗
+
+Anh không biết món quà này có đủ đặc biệt không, nhưng anh đã gửi vào đây thật nhiều tình cảm. Cảm ơn em vì đã xuất hiện, vì những lần làm anh bật cười, vì những điều nhỏ xíu mà em làm nhưng lại khiến anh vui cả ngày.
+
+Tuổi mới, anh mong em luôn khỏe mạnh, ngủ ngon, ăn ngon, bớt lo nghĩ và có thật nhiều lý do để mỉm cười. Mong những điều khiến em buồn sẽ nhẹ nhàng qua đi, những điều em cố gắng sẽ có kết quả thật đẹp. Và những ngày em thấy mệt, mong em nhớ rằng em không cần phải mạnh mẽ một mình đâu. Anh luôn muốn được lắng nghe, ôm em một cái thật lâu và cùng em đi qua những ngày không dễ dàng.
+
+Anh chẳng hứa lúc nào mình cũng hoàn hảo, nhưng anh muốn học cách yêu em tốt hơn mỗi ngày — bằng sự chân thành, kiên nhẫn, quan tâm và những cái ôm thật chặt. Mong năm nay, năm sau và nhiều năm nữa, anh vẫn có cơ hội được chúc mừng sinh nhật em, được nhìn em vui vẻ và được cùng em tạo thêm thật nhiều kỷ niệm.
+
+Chúc em tuổi mới thật nhiều bình yên, may mắn, thành công và tình yêu. Hôm nay hãy cứ làm nhân vật chính, cứ nhận thật nhiều yêu thương, vì em xứng đáng với tất cả những điều ngọt ngào nhất trên đời. 🎂🌷
+
+Thương em nhiều hơn những gì anh nói được. Hôn một cái nè! 😚💋</div>
+    <div class="signature">— Anh, người thương em nhất hôm nay và cả những ngày sau 💗</div>
+    <div class="note">Còn một món quà bí mật nữa nè… Chọn một trái tim để mở nha! 🥰</div>
+    <button class="btn" id="secretBtn">Mở quà bí mật 💝</button>
+    <button class="btn secondary" id="resetFromLetterBtn">Trở lại từ đầu ↺</button>
+  </div>
+</section>
+
+<section class="screen hidden" id="secret">
+  <div class="panel">
+    <div class="eyebrow">Choose your little surprise</div>
+    <h2 class="big-title" style="font-size:clamp(2rem,7vw,3.2rem)">Trái tim nào dành cho em? 💞</h2>
+    <p class="subtitle">Chọn một trái tim đi nè. Mỗi trái tim có một lời hứa nho nhỏ anh muốn dành cho em. 🫶</p>
+    <div class="heart-grid">
+      <button class="heart-choice" data-choice="0"><span>💗</span>Một cái ôm</button>
+      <button class="heart-choice" data-choice="1"><span>💖</span>Một lời hứa</button>
+      <button class="heart-choice" data-choice="2"><span>💘</span>Một điều ước</button>
+    </div>
+    <div class="answer hidden" id="answer"></div>
+    <button class="btn secondary" id="againBtn">Đọc thư thêm lần nữa 💌</button>
+    <button class="btn secondary" id="resetFromSecretBtn">Trở lại từ đầu ↺</button>
+    <div class="footer">Anh làm món quà này bằng thật nhiều yêu thương 💗</div>
+  </div>
+</section>
+<script>
+const $ = id => document.getElementById(id);
+function show(id){['intro','birthday','letter','secret'].forEach(x=>$(x).classList.toggle('hidden',x!==id));window.scrollTo({top:0,behavior:'smooth'});}
+$('openBtn').addEventListener('click',()=>show('birthday'));
+$('blowBtn').addEventListener('click',()=>{$('candleNote').textContent='Phùùù! Nến tắt rồi, nhưng tình yêu anh dành cho em thì vẫn sáng hoài nhaaa. Chúc em tuổi mới thật hạnh phúc! 🥳💗';$('blowBtn').classList.add('hidden');$('letterBtn').classList.remove('hidden');confettiHearts();});
+$('letterBtn').addEventListener('click',()=>show('letter'));
+$('secretBtn').addEventListener('click',()=>show('secret'));
+$('againBtn').addEventListener('click',()=>show('letter'));
+function resetExperience(){
+  $('candleNote').textContent='Nến đang sáng lung linh chờ em đó. Ước gì thì ước, nhớ chừa một điều ước cho tụi mình nha. 💞';
+  $('blowBtn').classList.remove('hidden');
+  $('letterBtn').classList.add('hidden');
+  $('answer').textContent='';
+  $('answer').classList.add('hidden');
+  document.querySelectorAll('.heart-choice').forEach(b=>b.classList.remove('active'));
+  show('intro');
+}
+$('resetFromLetterBtn').addEventListener('click',resetExperience);
+$('resetFromSecretBtn').addEventListener('click',resetExperience);
+const answers=[
+'Anh ôm em một cái thật lâu, lâu đến mức mọi mệt mỏi đều tan biến. Nếu hôm nay em cần một cái ôm, cứ xem như anh đang dang tay ôm em thật chặt nha. 🫂💗',
+'Anh hứa sẽ cố gắng yêu em bằng sự chân thành, lắng nghe em nhiều hơn, trân trọng những điều nhỏ bé và không xem tình cảm của em là điều hiển nhiên. Mình cùng nhau tốt hơn mỗi ngày nhé. 🥹💕',
+'Điều ước của anh là em luôn khỏe mạnh, vui vẻ và bình an. Còn điều ước ích kỷ một chút… là mong anh vẫn được nắm tay em, cùng em đón thêm thật nhiều sinh nhật nữa. 🌟💋'
+];
+document.querySelectorAll('.heart-choice').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.heart-choice').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const a=$('answer');a.textContent=answers[Number(btn.dataset.choice)];a.classList.remove('hidden');confettiHearts();}));
+$('musicBtn').addEventListener('click',async()=>{const m=$('music');if(m.paused){try{await m.play();$('musicBtn').textContent='🎵 Tắt nhạc';}catch(e){$('musicBtn').textContent='🎵 Thêm file nhac.mp3';}}else{m.pause();$('musicBtn').textContent='🎵 Bật nhạc';}});
+function confettiHearts(){
+  for(let i=0;i<55;i++){
+    const e=document.createElement('span');e.className='float';
+    e.textContent=['💗','💕','💖','💘','❤️','💓','🌸','✨'][Math.floor(Math.random()*8)];
+    e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*30)+'px';
+    e.style.animationDuration=(3+Math.random()*4)+'s';document.body.appendChild(e);
+    setTimeout(()=>e.remove(),8000);
+  }
+}
+setInterval(()=>{
+  for(let i=0;i<3;i++){
+    const e=document.createElement('span');e.className='float';
+    e.textContent=['💗','🌸','💕','💖','💘','❤️'][Math.floor(Math.random()*6)];
+    e.style.left=Math.random()*100+'vw';e.style.fontSize=(16+Math.random()*22)+'px';
+    e.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(e);
+    setTimeout(()=>e.remove(),11000);
+  }
+},450);
+</script>
+</body>
+</html>
